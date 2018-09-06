@@ -1,31 +1,43 @@
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="<?php bloginfo("charset"); ?>">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title><?php wp_title(); ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- 
+		//////////////////////////////////////////////////////
 
+		FREE HTML5 TEMPLATE 
+		DESIGNED & DEVELOPED by FreeHTML5.co
+			
+		Website: 		http://freehtml5.co/
+		Email: 			info@freehtml5.co
+		Twitter: 		http://twitter.com/fh5co
+		Facebook: 		https://www.facebook.com/fh5co
 
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+		//////////////////////////////////////////////////////
+		 -->
 
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 		<?php
 		wp_head();
 		?>
 	</head>
 	<body>
 		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container-wrap">
-			<div class="top-menu">
-				<div class="row">
-					<div class="col-xs-10 text-right menu-1">
+		<div class="fh5co-loader"></div>
+		
+		<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="container-wrap">
+				<div class="top-menu">
+					<div class="row">
+						<div class="col-xs-2">
 							<div id="fh5co-logo">
 								<a href="<?php echo home_url(); ?>">
 									<?php
@@ -46,6 +58,8 @@
 									?>
 								</a>
 							</div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
 							<?php 
 							$args = [
 								"menu_class" => "surasome reikalingas klases",
@@ -56,10 +70,10 @@
 							wp_nav_menu($args);
 
 							?>
+						</div>
 					</div>
+					
 				</div>
-				
 			</div>
-		</div>
-	</nav>
-	<div class="container-wrap">
+		</nav>
+		<div class="container-wrap">

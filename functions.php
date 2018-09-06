@@ -104,7 +104,7 @@ add_action('wp_enqueue_scripts', 'theme_stylesheets');
 function register_theme_menus() {
    
 	register_nav_menus(array( 
-        'primary-navigation' => __( 'Primary Navigation' ) 
+        'primary-navigation' => __( 'Primary Navigation' )
     ));
 }
 
@@ -194,11 +194,11 @@ function makePostTypeLabels( $name, $nameSingular ) {
 	return array(
 		'name' => _x($name, 'post type general name'),
 		'singular_name' => _x($nameSingular, 'post type singular name'),
+		'view_item' => __('View '.$nameSingular),
 		'add_new' => _x('Add New', 'Example item'),
 		'add_new_item' => __('Add New '.$nameSingular),
 		'edit_item' => __('Edit '.$nameSingular),
 		'new_item' => __('New '.$nameSingular),
-		'view_item' => __('View '.$nameSingular),
 		'search_items' => __('Search '.$name),
 		'not_found' => __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Bin'),
@@ -225,4 +225,6 @@ function dump($value){
 
 add_image_size('logo-image', 100, 40, false);
 add_image_size('slider-image', 1060, 0, false);
+
+
 ?>

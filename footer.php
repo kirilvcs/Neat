@@ -1,4 +1,4 @@
-	</div><!-- END container-wrap -->
+	</div>
 	<div class="container-wrap">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="row">
@@ -25,7 +25,7 @@
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-					<div>
+					<p>
 						<ul class="fh5co-social-icons">
 							<?php
 							if(have_rows('fo_social_menu_repeater', 'option')):
@@ -47,7 +47,7 @@
 							endif;
 							?>
 						</ul>
-					</div>
+					</p>
 				</div>
 			</div>
 		</footer>
