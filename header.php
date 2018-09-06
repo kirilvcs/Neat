@@ -25,9 +25,6 @@
 		<div class="container-wrap">
 			<div class="top-menu">
 				<div class="row">
-					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html">Neat</a></div>
-					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
@@ -44,6 +41,26 @@
 							<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
+							<div id="fh5co-logo">
+								<a href="<?php echo home_url(); ?>">
+									<?php
+									// get_field('lauko pavadinimas') - reiksme grazina
+									// the_field('lauko pavadinimas') - reiksme spausdina
+									// Options page
+									// get_field('lauko pavadinimas', 'option') - reiksme grazina
+									// the_field('lauko pavadinimas', 'option') - reiksme spausdina
+									if(get_field('ho_logo_type', 'option')):
+										the_field('ho_logo_text', 'option');
+									else:
+										$image = get_field('ho_logo_image', 'option');
+										if( !empty($image) ): ?>
+											<img src="<?php echo $image['sizes']['logo-image']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<?php
+										endif;
+									endif;
+									?>
+								</a>
+							</div>
 					</div>
 				</div>
 				
