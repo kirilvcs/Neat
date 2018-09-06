@@ -182,4 +182,12 @@ function dump($value){
 	echo "</pre>";
 }
 
+// Sukuriame nauja pav. dydi
+// add_image_size( $name, $width, $height, false );
+// $name - pavadinimas 
+// $width - plotis rasosi tik skaicius
+// $height - aukstis rasosi tik skaicius
+// false - ar bus atliekamas karpymas
+
+add_image_size('logo-image', 100, 40, false);
 ?>
