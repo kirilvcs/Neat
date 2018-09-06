@@ -81,6 +81,7 @@ function theme_stylesheets(){
 		wp_register_style('bootstrap', ASSETS_URL.'/assets/css/bootstrap.css', array('icomoon'), false, 'all');
 		wp_register_style('magnific-popup', ASSETS_URL.'/assets/css/magnific-popup.css', array('bootstrap'), false, 'all');
 		wp_register_style('flexslider', ASSETS_URL.'/assets/css/flexslider.css', array('magnific-popup'), false, 'all');
+		wp_register_style('fa', ASSETS_URL.'/assets/css/font-awesome.min.css', array('magnific-popup'), false, 'all');
 		wp_register_style('main-css', ASSETS_URL . '/assets/css/style.css', array('flexslider'), false, 'all');
 
 		// Stiliaus failu iskvietimas
@@ -92,6 +93,7 @@ function theme_stylesheets(){
 		wp_enqueue_style('bootstrap');
 		wp_enqueue_style('magnific-popup');
 		wp_enqueue_style('flexslider');
+		wp_enqueue_style('fa');
 		wp_enqueue_style('main-css');
 	}
 }
