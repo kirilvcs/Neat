@@ -27,10 +27,25 @@
 					</p>
 					<div>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<?php
+							if(have_rows('fo_social_menu_repeater', 'option')):
+								while(have_rows('fo_social_menu_repeater', 'option')): the_row();
+									$link = get_sub_field('link');
+									if($link['target']=="_blank"){
+										$link['target']='target="_blank"';
+									}else{
+										$link['target']='';
+									}
+									?>
+									<li>
+										<a href="<?php echo $link['url'] ?>" <?php echo $link['target']; ?>>
+											<i class="<?php the_sub_field('icon'); ?>"></i>
+										</a>
+									</li>
+									<?php
+								endwhile;
+							endif;
+							?>
 						</ul>
 					</div>
 				</div>
