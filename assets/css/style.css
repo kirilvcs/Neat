@@ -263,11 +263,11 @@ h1, h2, h3, h4, h5, h6, figure {
   -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
-.fh5co-nav ul li.active > a {
+.fh5co-nav ul li.current-menu-item > a {
   color: #000 !important;
   position: relative;
 }
-.fh5co-nav ul li.active > a:after {
+.fh5co-nav ul li.current-menu-item > a:after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
