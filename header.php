@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
 	<meta charset="utf-8">
 	<title>Neat &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
