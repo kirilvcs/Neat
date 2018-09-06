@@ -175,4 +175,11 @@ function makePostTypeLabels( $name, $nameSingular ) {
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();	
 }
+
+function dump($value){
+	echo "<pre>";
+	print_r($value);
+	echo "</pre>";
+}
+
 ?>
