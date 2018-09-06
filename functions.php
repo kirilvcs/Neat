@@ -29,8 +29,37 @@ function theme_stylesheets(){
 	$styles_path = ASSETS_URL . '/assets/css/main.css';
 
 	if( $styles_path ) {
-	
-		wp_register_style('main-css', ASSETS_URL . '/assets/css/main.css', array(), false, 'all');
+
+		// https://fonts.googleapis.com/css?family=Oxygen:300,400
+		// https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700
+		// css/animate.css
+		// css/icomoon.css
+		// css/bootstrap.css
+		// css/magnific-popup.css
+		// css/flexslider.css
+		// css/style.css
+
+		// Stiliaus registravimas
+		// wp_register_style(handle, kelias_iki_failo, dependency, versijos_nr, devices)
+		wp_register_style('oxygen-font', 'https://fonts.googleapis.com/css?family=Oxygen:300,400', array(), false, 'all');
+		wp_register_style('source-sans-pro-font', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), false, 'all');
+
+		wp_register_style('animate', ASSETS_URL.'/assets/css/animate.css', array(), false, 'all');
+		wp_register_style('icomoon', ASSETS_URL.'/assets/css/icomoon.css', array('animate'), false, 'all');
+		wp_register_style('bootstrap', ASSETS_URL.'/assets/css/bootstrap.css', array('icomoon'), false, 'all');
+		wp_register_style('magnific-popup', ASSETS_URL.'/assets/css/magnific-popup.css', array('bootstrap'), false, 'all');
+		wp_register_style('flexslider', ASSETS_URL.'/assets/css/flexslider.css', array('magnific-popup'), false, 'all');
+		wp_register_style('main-css', ASSETS_URL . '/assets/css/style.css', array('flexslider'), false, 'all');
+
+		// Stiliaus failu iskvietimas
+		// wp_enqueue_style(handle);
+		wp_enqueue_style('oxygen-font');
+		wp_enqueue_style('source-sans-pro-font');
+		wp_enqueue_style('animate');
+		wp_enqueue_style('icomoon');
+		wp_enqueue_style('bootstrap');
+		wp_enqueue_style('magnific-popup');
+		wp_enqueue_style('flexslider');
 		wp_enqueue_style('main-css');
 	}
 }
