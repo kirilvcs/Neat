@@ -14,11 +14,43 @@ function theme_scripts(){
 
     if ( !is_admin() ) {
 
+    	// modernizr-2.6.2.min.js
+  		// jquery.min.js
+		// jquery.easing.1.3.js
+		// bootstrap.min.js
+		// jquery.waypoints.min.js
+		// jquery.flexslider-min.js
+		// jquery.magnific-popup.min.js
+		// magnific-popup-options.js
+		// jquery.countTo.js
+		// main.js
         wp_deregister_script('jquery');
-				wp_register_script('jquery', ASSETS_URL . '/assets/js/jquery-2.1.1.js', false, '2.1.1', true);
 
-        wp_register_script('js_main', ASSETS_URL . '/assets/js/main.js', array('jquery'), '1.0', true);
-        wp_enqueue_script('js_main');
+        // JS registravimas
+        // wp_register_script(handle, kelias_iki_failo, dependencies, versija, ar_krauti_i_footer)
+		wp_register_script('jquery', ASSETS_URL . '/assets/js/jquery.min.js', false, false, true);
+		wp_register_script('modernizr', ASSETS_URL . '/assets/js/modernizr-2.6.2.min.js', false, false, false);
+
+        wp_register_script('easing', ASSETS_URL . '/assets/js/jquery.easing.1.3.js', array('jquery'), false, true);
+        wp_register_script('bootstrap', ASSETS_URL . '/assets/js/bootstrap.min.js', array('jquery'), false, true);
+        wp_register_script('waypoints', ASSETS_URL . '/assets/js/jquery.waypoints.min.js', array('jquery'), false, true);
+        wp_register_script('flex-slider', ASSETS_URL . '/assets/js/jquery.flexslider-min.js', array('jquery'), false, true);
+        wp_register_script('magnific', ASSETS_URL . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), false, true);
+        wp_register_script('magnific-options', ASSETS_URL . '/assets/js/magnific-popup-options.js', array('jquery'), false, true);
+        wp_register_script('count-to', ASSETS_URL . '/assets/js/jquery.countTo.js', array('jquery'), false, true);
+        wp_register_script('main', ASSETS_URL . '/assets/js/main.js', array('jquery'), false, true);
+
+
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('modernizr');
+        wp_enqueue_script('easing');
+        wp_enqueue_script('bootstrap');
+        wp_enqueue_script('waypoints');
+        wp_enqueue_script('flex-slider');
+        wp_enqueue_script('magnific');
+        wp_enqueue_script('magnific-options');
+        wp_enqueue_script('count-to');
+        wp_enqueue_script('main');
     }
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
