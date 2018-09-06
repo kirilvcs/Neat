@@ -8,6 +8,7 @@ get_header();
 <h1>Esame homepage.php</h1>
 <?php 
 	get_template_part('partials/hero'); // uzkrauname hero.php is partials katalogo
+	get_template_part('partials/services');
 ?>
 
 <?php get_footer(); ?>
