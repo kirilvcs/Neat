@@ -222,4 +222,5 @@ function dump($value){
 // false - ar bus atliekamas karpymas
 
 add_image_size('logo-image', 100, 40, false);
+add_image_size('slider-image', 1060, 0, false);
 ?>
