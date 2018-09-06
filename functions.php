@@ -112,7 +112,7 @@ add_action( 'init', 'register_theme_menus' );
 
 // Apibrėžiame widgets juostas
 
-#$sidebars = array( 'Footer Widgets', 'Blog Widgets' );
+$sidebars = array('Footer 1', 'Footer 2', 'Footer 3', 'Footer 4');
 
 if( isset($sidebars) && !empty($sidebars) ) {
 
@@ -128,8 +128,8 @@ if( isset($sidebars) && !empty($sidebars) ) {
 			'description' => $sidebar,
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>'
 		));
 	}
 }
