@@ -226,5 +226,20 @@ function dump($value){
 add_image_size('logo-image', 100, 40, false);
 add_image_size('slider-image', 1060, 0, false);
 
+function create_posttype() {
+  register_post_type( 'projects',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => __('projects')),
+      'supports'  => array( 'title', 'editor', 'author', 'thumbnail')
+    )
+  );
+}
+add_action( 'init', 'create_posttype' );
 
 ?>
