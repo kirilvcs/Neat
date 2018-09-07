@@ -242,4 +242,18 @@ function create_posttype() {
 }
 add_action( 'init', 'create_posttype' );
 
+add_action( 'init', 'create_project_taxonomy' );
+
+function create_project_taxonomy() {
+	register_taxonomy(
+		'project-category',
+		'projects',
+		array(
+			'label' => __( 'Category' ),
+			'rewrite' => array( 'slug' => __('project-category') ),
+			'hierarchical' => true,
+		)
+	);
+}
+
 ?>
